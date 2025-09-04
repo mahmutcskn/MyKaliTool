@@ -38,6 +38,17 @@ def handle_input(choice):
         print("\n\n")
         print("Bugün nasılsın? Umarım her şey yolundadır.")
         input("\nMenüye dönmek için Enter'a basın...")
+
+    elif choice == '3':
+    clear_screen()
+    print(f"{Fore.MAGENTA}{Style.BRIGHT}{'Trojan Seçildi' : ^50}")
+    print("\nYeni terminal penceresi açılıyor ve 'veil' çalıştırılıyor...\n")
+    # yeni branch oluşturuldu
+
+    # Yeni terminal açıp "veil" komutunu çalıştır
+    os.system("gnome-terminal -- bash -c 'veil; exec bash'")
+    input("\nMenüye dönmek için Enter'a basın...")
+
     elif choice.lower() in ['exit', 'quit']:
         print(f"{Fore.RED}Çıkış yapılıyor...")
         sys.exit(0)
